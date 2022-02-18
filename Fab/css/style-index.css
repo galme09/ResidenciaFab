@@ -1,0 +1,305 @@
+:root{ /* propiedades por defecto */
+    --blanco: #ffffff;
+    --negro: #212121;
+    --prim: #ffc107;
+    --sec: #0097a7;
+    --gris: #757575;
+    --deg: #DFE9F3;
+
+}
+
+/*esquema global*/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /*todo lo hace en automatico en el modelo de caja*/
+    scroll-snap-type: y mandatory;
+}
+
+/* Scroll snap
+.servicios, .navegacion, .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: unset;
+} */
+
+*, *::before, *::after{
+    box-sizing: inherit; /*no afecta el padding o border al tamaño fijo de algo*/
+}
+
+.foot{
+    text-align: center;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif; /*fuente externa tomada desde google*/
+    background-image: linear-gradient(to top, var(--deg) 0%, var(--blanco) 100%);
+    /*aunque sea un color de fondo siempre se debe elegir "image" en vez de "color"
+      1. la propiedad pide que le mandes en qué dirección irá el degradado
+      2. luego le pasas el color que va a ir degrandando hasta llegar al color final (valor inicial 0%)
+      3. defines a que color llegará al final (valor final 100%)
+    */
+    /*todos los colores de fondo van aquí*/
+}
+
+
+/*utilidades*/
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear {
+    justify-content: flex-end;
+}
+
+
+
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;  /*le da un diseño de esquinas redondas a la caja*/
+}
+
+/*tipografía*/
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+
+/* 1rem = 10px */
+
+/*titulos*/
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--negro);
+    
+}
+
+.titulo span{
+    font-size: 2rem;
+    
+}
+
+.contenedor { 
+    max-width: 100rem;
+    margin: 0 auto;  /*da un margen desde afuera*/
+}
+
+.contenedor h2, h3 {
+    text-align: center;
+}
+
+
+/*navegación principal*/
+.nav-bg { 
+    background-color: var(--sec); 
+}
+
+.navegacion {
+     /*da un margen desde adentro*/
+    display: flex; /*modifica el diseño de caja para un mejor control*/
+    flex-direction: column; /*modifica el sentido a columnas*/
+    
+}
+
+/*480px = telefono
+  768px = tablet
+  1140px = laptop o computadora de escritorio
+  1400px = pantalla de plasma*/
+@media (min-width: 600px) {
+    .navegacion{
+        flex-direction: row;
+        justify-content: space-around; /*hace que los elementos se distribuyan estaticamente*/
+    }
+}
+
+.navegacion a { 
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none; /*quita laslínea de los enlaces */
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1.5rem;
+}
+
+.navegacion a:hover{ /*hace que se vea una animación al momento de posicionar en el enlace*/
+    background-color: var(--prim);
+    color: var(--negro);
+}
+
+/*banner - hero*/
+
+.hero{
+  background-image: url(../img/hero.jpg);  /*poner una imagen de fondo*/
+  background-repeat: no-repeat; /*hace que no se repita la imagen*/
+  background-size: cover; /*hace que la imagen tome todo el ancho disponible*/
+  height: 450px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+
+.hero-content { 
+    position: absolute;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h2 {
+    color: var(--blanco);
+}
+
+
+/*botones*/
+.boton {
+    background-color: var(--sec);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;  /*le da un borde redondeado al botón*/
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+.boton :hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+/*uso del grid*/
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /*fromato abreviado*/
+        /*son 3 columnas en total, y decir "1fr" es como si le dijera que tome el 33.3% del espacio
+         depende del número de columnas, si fueran 4 sería: 25% 25% 25% 25% ó 1fr 1fr 1fr 1fr */
+        column-gap: 2rem;
+    }
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service h3 {
+    color: var(--sec);
+    font-weight: normal;
+}
+
+.service p {
+    line-height: 2;
+    text-align: justify;
+}
+
+.service .icono {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--prim);
+    border-radius: 50%;     /*al tener un cuadrado y darle este porcentaje de borde se hace un círculo perfecto*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/*Contacto - formularios*/
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);  /*toma el valor más pequeño*/
+    margin: 0 auto; /*usado para centrar formularios*/
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--prim);
+}
+
+/*Posicionando los inputs*/
+
+@media (min-width: 768px) {
+    .inputs-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    } 
+
+    .input:nth-child(3), .input:nth-child(4) { /*nth-child, permite seleccionar una entrada en especifico (forma de arreglo) si es que hay más de una con la misma clase; comienza desde 1*/
+        grid-column: 1 / 3; /*grid-column/row posiciona al elemento de acuerdo al número de columnas o filas; defines su largo y posición*/
+    }
+}
+
+.input {
+    margin-bottom: 2rem;
+}
+
+.input label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+
+}
+
+.input textarea {
+    height: 20rem;
+} 
+
