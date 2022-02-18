@@ -153,10 +153,10 @@ h3 {
 /*banner - hero*/
 
 .hero{
-  background-image: url(../img/hero.jpg);  /*poner una imagen de fondo*/
+  background-image: url(../img/banner.jpg);  /*poner una imagen de fondo*/
   background-repeat: no-repeat; /*hace que no se repita la imagen*/
   background-size: cover; /*hace que la imagen tome todo el ancho disponible*/
-  height: 450px;
+  height: 400px;
   position: relative;
   margin-bottom: 2rem;
 }

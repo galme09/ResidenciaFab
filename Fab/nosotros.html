@@ -3,70 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrontEnd Store</title>
-    <link rel="preload" href="/css/normalize.css" as="style">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="preload" href="/css/style.css" as="style">
-    <link rel="stylesheet" href="/css/style.css">
+    <title>CICT</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <!--precarga de la fuente-->
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet"> <!--fuente externa tomada de google-->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header class="header">
-        <a href="/index.html">
-            <img class="header__logo" src="/img/logo.png" alt="Logotipo">
-        </a>
+    <header>
+        <h1 class="titulo">Colegio de Ingenieros de Tapachula</h1>
     </header>
 
-    <nav class="nav">
-        <a class="nav__link" href="/index.html">Tienda</a>
-        <a class="nav__link nav__link--act" href="/nosotros.html">Nosotros</a>
-    </nav>
+    <div class="nav-bg">
+        <nav class="navegacion contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Organización</a>
+            <a href="#">Actividades</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="#">Afiliación</a>
+        </nav>
+    </div><!--.nav-bg-->
 
-    <main class="contenedor">
-        <h1>Nosotros</h1>
-        <div class="nosotros">
-            <div>
-                <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente vero, obcaecati nisi praesentium totam aliquid, repellat cum architecto doloribus quo numquam autem eius delectus aut qui necessitatibus ea odio dolor!
-                </p>
-                <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae animi voluptates doloribus voluptatibus voluptatem corporis fugiat saepe. 
-                Deleniti autem quod provident facilis aperiam possimus numquam qui, expedita praesentium sit.
-                </p>
-            </div>
-            <img src="/img/nosotros.jpg" alt="imagen nosotros" class="nosotros__imagen">
-        </div>
-    </main>
+    <section class="hero">
+        <div class="hero-content"> 
+        <h2>CICT</h2>
 
-    <section class="contenedor comprar">
-        <h2 class="comprar__titulo">¿Por qué comprar con nosotros?</h2>
-        <div class="bloques">
-            <div class="bloq">
-                <img class="bloq__image" src="/img/icono_1.png" alt="por qué comprar">
-                <h3 class="bloq__titulo">El mejor precio</h3>
-                <p>Deleniti autem quod provident facilis aperiam possimus numquam qui, expedita praesentium sit</p>
-            </div> <!--.bloq-->
-            <div class="bloq">
-                <img class="bloq__image" src="/img/icono_2.png" alt="por qué comprar">
-                <h3 class="bloq__titulo">Para Devs</h3>
-                <p>Deleniti autem quod provident facilis aperiam possimus numquam qui, expedita praesentium sit</p>
-            </div> <!--.bloq-->
-            <div class="bloq">
-                <img class="bloq__image" src="/img/icono_3.png" alt="por qué comprar">
-                <h3 class="bloq__titulo">Envío gratis</h3>
-                <p>Deleniti autem quod provident facilis aperiam possimus numquam qui, expedita praesentium sit</p>
-            </div> <!--.bloq-->
-            <div class="bloq">
-                <img class="bloq__image" src="/img/icono_4.png" alt="por qué comprar">
-                <h3 class="bloq__titulo">La mejor calidad</h3>
-                <p>Deleniti autem quod provident facilis aperiam possimus numquam qui, expedita praesentium sit</p>
-            </div> <!--.bloq-->
-        </div> <!--.bloques-->
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="80" height="80"
+                viewBox="0 0 24 24" stroke-width="2" stroke="#ffc107" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="12" cy="11" r="3" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+                Tapachula, Chiapas</p>
 
-    </section>
-    <footer class="footer">
-        <p class="footer__txt">FrontEnd Store - Todos los derechos reservados 2021</p>
+            <a href="contacto.html" class="boton">Contactar</a>
+        </div><!--.hero-content-->
+    </section> <!--.hero-->
+
+    <main class="contenedor sombra">
+        <h2>Reseña Histórica</h2>
+        <p>
+            Los ingenieros civiles de Tapachula, en su afán de formar una asociación civil, 
+            constituyeron el Colegio de Ingenieros Civiles de Chiapas junto con profesionales de la ciudad de Tuxtla Gutiérrez. 
+            Esto provocó algunos problemas en el desempeño de sus actividades debido a la distancia para asistir a las reuniones, 
+            por lo que en 1979, y con el debido consentimiento de los ingenieros de ambas entidades, se forma el Colegio de Ingenieros Civiles de Tapachula, A.C.
+        </p>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>Misión</h3>
+        <p>
+            Impulsar el fortalecimiento gremial a través de la unidad con el objetivo de coadyuvar con los tres niveles de gobierno, 
+            instituciones públicas y privadas en proyectos de interés común y que esto se refleje en el bienestar de cada uno de los agremiados.
+        </p>
+        <p>
+            De igual forma capacitar en todos los ámbitos 
+            al colegiado para que tenga las herramientas necesarias para un mejor desempeño en su entorno profesional
+        </p>
+
+        <br>
+        <h3>Visión</h3>
+        <p>
+            Mantener y mejorar aún más el prestigio de nuestra Asociación Civil en la sociedad, 
+            con la finalidad de que nuestros agremiados tengan representatividad e influencia social con fuerza y
+            determinación para opinar y participar dentro de los proyectos públicos y de la iniciativa privada que se generen en nuestro entorno.
+        </p>
+
+        <br>
+        <h3>Valores</h3>
+        <ul>
+            <li>Responsabilidad.</li>
+            <li>Respeto.</li>
+            <li>Honestidad.</li>
+        </ul>
+        
+        <br>
+        <hr>
+        <br>
+
+        <h3>Nuestros Objetivos</h3>
+        <ul>
+            <li>
+                Impulsar la ingeniería civil y vigilar el ejercicio profesional del ingeniero con objeto de que se realice dentro del plano legal y
+                moral con fines culturales y sociales, fuera de toda actividad política y religiosa.
+            </li>
+            <br>
+            <li>
+                Salvaguardar los intereses de la sociedad, en materia del ejercicio de la ingeniería civil, con base en la calidad y
+                 la integridad de los servicios de sus profesionales; y velar por los intereses legítimos de los miembros del colegio.
+            </li>
+            <br>
+            <li>
+                Ser un colegio reconocido en el ámbito estatal como la asociación que contribuye a las estrategias destinadas 
+                al fortalecimiento y a la participación de la ingeniería civil en el estado chiapas; 
+                tanto en el ámbito de la región como en la planeación y desarrollo sostenible de la infraestructura. 
+            </li>
+        </ul>
+    </main><!--.contenedor .sombra-->
+
+    <footer class="foot">
+        <p>&copy; 2022 Colegio de Ingenieros Civiles de Tapachula | Todos los derechos reservados</p>
     </footer>
 </body>
+
 </html>
