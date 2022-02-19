@@ -1,8 +1,8 @@
 :root{ /* propiedades por defecto */
     --blanco: #ffffff;
     --negro: #212121;
-    --prim: #ffc107;
-    --sec: #0097a7;
+    --prim: #39ab30;
+    --sec: #036734;
     --gris: #757575;
     --deg: #DFE9F3;
 
@@ -26,7 +26,14 @@ html {
 }
 
 .foot{
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--sec);
+    color: var(--blanco);
     text-align: center;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 body {
@@ -147,7 +154,7 @@ h3 {
 
 .navegacion a:hover{ /*hace que se vea una animación al momento de posicionar en el enlace*/
     background-color: var(--prim);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 /*banner - hero*/
