@@ -82,6 +82,13 @@ body {
     justify-content: flex-end;
 }
 
+@media (min-width: 768px){
+    .centrar{
+        display: block;
+        margin: auto;
+    }
+}
+
 
 
 
