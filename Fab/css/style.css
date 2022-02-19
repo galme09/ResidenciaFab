@@ -31,7 +31,14 @@ html {
     background-color: var(--sec);
     color: var(--blanco);
     text-align: center;
-
+    display: grid;
+    grid-template-columns: 85% 5% 5% 5%;
+}
+.foot svg{
+    align-items: center;
+    margin: 0 auto;
+} 
+.f {
     display: flex;
     justify-content: space-between;
 }
@@ -270,7 +277,7 @@ h3 {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: var(--prim);
+    color: var(--blanco);
 }
 
 /*Posicionando los inputs*/
@@ -282,7 +289,7 @@ h3 {
         column-gap: 1.5rem;
     } 
 
-    .input:nth-child(3), .input:nth-child(4) { /*nth-child, permite seleccionar una entrada en especifico (forma de arreglo) si es que hay más de una con la misma clase; comienza desde 1*/
+    .input:nth-child(3), .input:nth-child(4), .input:nth-child(5) { /*nth-child, permite seleccionar una entrada en especifico (forma de arreglo) si es que hay más de una con la misma clase; comienza desde 1*/
         grid-column: 1 / 3; /*grid-column/row posiciona al elemento de acuerdo al número de columnas o filas; defines su largo y posición*/
     }
 }
